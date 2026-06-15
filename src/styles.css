@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #f4efe5;
+  --surface: rgba(255, 250, 241, 0.94);
+  --surface-strong: #ffffff;
+  --border: rgba(33, 90, 71, 0.16);
+  --text: #17251f;
+  --muted: #65756d;
+  --accent: #15735a;
+  --accent-dark: #0d4f3d;
+  --accent-soft: #e1f2ea;
+  --gold: #c99a45;
+  --danger: #9f1239;
+  --shadow: 0 18px 50px rgba(35, 55, 44, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(201, 154, 69, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgba(21, 115, 90, 0.2), transparent 32%),
+    linear-gradient(135deg, rgba(21, 115, 90, 0.06) 25%, transparent 25%) 0 0 / 34px 34px,
+    linear-gradient(225deg, rgba(201, 154, 69, 0.07) 25%, transparent 25%) 0 0 / 34px 34px,
+    var(--bg);
+  color: var(--text);
+  font-family: "Cairo", ui-sans-serif, system-ui, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.appShell {
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    linear-gradient(30deg, transparent 47%, rgba(21, 115, 90, 0.05) 48%, rgba(21, 115, 90, 0.05) 52%, transparent 53%) 0 0 / 72px 72px,
+    linear-gradient(150deg, transparent 47%, rgba(201, 154, 69, 0.06) 48%, rgba(201, 154, 69, 0.06) 52%, transparent 53%) 0 0 / 72px 72px;
+}
+
+.reader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  max-width: 1360px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.content,
+.surahPanel,
+.playerCard,
+.ayahCard {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.content {
+  min-height: calc(100vh - 48px);
+  padding: 28px;
+  /* border-radius: 28px; */
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(36px, 5vw, 66px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.playerCard {
+  position: sticky;
+  top: 16px;
+  z-index: 2;
+  margin-bottom: 22px;
+  padding: 18px;
+  /* border-radius: 22px; */
+  border-top: 4px solid var(--gold);
+}
+
+.playerTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: flex-end;
+}
+
+.label,
+.reciterSelect span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.playerTop strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.reciterSelect {
+  min-width: 220px;
+}
+
+.reciterSelect select,
+.panelHeader input {
+  width: 100%;
+  border: 1px solid var(--border);
+  /* border-radius: 14px; */
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 11px 12px;
+  outline: none;
+  text-align: right;
+}
+
+.reciterSelect select:focus,
+.panelHeader input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.audio {
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.primaryButton,
+.textButton {
+  border: 0;
+  /* border-radius: 999px; */
+  font-weight: 900;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--accent);
+  color: white;
+  font-size: 17px;
+}
+
+.primaryButton:hover {
+  background: var(--accent-dark);
+}
+
+.primaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.notice {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  /* border-radius: 16px; */
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+}
+
+.notice.error {
+  background: #ffe4e6;
+  color: var(--danger);
+}
+
+.ayahList {
+  display: grid;
+  gap: 14px;
+}
+
+.ayahCard {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px;
+  /* border-radius: 20px; */
+}
+
+.ayahNumber {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(21, 115, 90, 0.16);
+  /* border-radius: 50%; */
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.arabic {
+  margin-bottom: 14px;
+  font-family: "Cairo", "Amiri", "Scheherazade New", "Noto Naskh Arabic", serif;
+  font-size: clamp(27px, 4vw, 38px);
+  font-weight: 600;
+  line-height: 1.95;
+}
+
+.textButton {
+  padding: 10px 16px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+}
+
+.textButton:hover {
+  background: #d4ebdf;
+}
+
+.surahPanel {
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* border-radius: 28px; */
+  border-top: 4px solid var(--accent);
+}
+
+.panelHeader {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.panelHeader h2 {
+  margin-bottom: 12px;
+  font-size: 26px;
+}
+
+.surahList {
+  overflow: auto;
+  padding: 10px;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.surahButton {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  border: 0;
+  /* border-radius: 16px; */
+  background: transparent;
+  color: var(--text);
+  padding: 12px;
+  text-align: right;
+}
+
+.surahButton:hover,
+.surahButton.active {
+  background: var(--accent-soft);
+}
+
+.surahButton.active {
+  outline: 2px solid rgba(21, 115, 90, 0.22);
+}
+
+.surahIndex {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 12px; */
+  background: var(--surface-strong);
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.surahMeta {
+  min-width: 0;
+}
+
+.surahMeta strong,
+.surahMeta small {
+  display: block;
+}
+
+.surahMeta small {
+  color: var(--muted);
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.surahArabic {
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 900;
+  padding: 6px 10px;
+  /* border-radius: 999px; */
+  background: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 980px) {
+  .appShell {
+    padding: 14px;
+  }
+
+  .reader {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .surahPanel {
+    order: -1;
+    position: static;
+    width: 100%;
+    max-height: 420px;
+  }
+
+  .content {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .playerCard {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .playerTop {
+    display: block;
+  }
+
+  .reciterSelect {
+    min-width: 0;
+    margin-top: 14px;
+  }
+
+  .ayahCard {
+    grid-template-columns: 1fr;
+  }
+
+  .surahButton {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .surahArabic {
+    grid-column: 2;
+    width: fit-content;
+  }
+}

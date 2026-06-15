@@ -1,0 +1,21 @@
+{
+  "name": "quran-time-frontend",
+  "version": "0.1.0",
+  "homepage": "http://quran.louayegafaiti.work",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "node scripts/generate-sitemap.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "swr": "2.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.16"
+  }
+}

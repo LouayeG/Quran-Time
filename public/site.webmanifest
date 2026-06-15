@@ -1,0 +1,20 @@
+{
+  "name": "وقت القرآن",
+  "short_name": "وقت القرآن",
+  "description": "موقع عربي بسيط لقراءة القرآن الكريم والاستماع إلى التلاوة.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4efe5",
+  "theme_color": "#15735a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

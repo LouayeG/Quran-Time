@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="وقت القرآن">
+  <rect width="64" height="64" rx="16" fill="#15735a"/>
+  <path d="M18 14h22a8 8 0 0 1 8 8v28H24a8 8 0 0 1-8-8V16a2 2 0 0 1 2-2Z" fill="#fffaf1"/>
+  <path d="M23 22h18M23 30h18M23 38h14" stroke="#15735a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 16h5v28a6 6 0 0 0 6 6h-3a8 8 0 0 1-8-8V16Z" fill="#c99a45"/>
+</svg>

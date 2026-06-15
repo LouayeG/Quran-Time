@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="وقت القرآن">
+  <defs>
+    <pattern id="pattern" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M40 0 80 40 40 80 0 40Z" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
+      <circle cx="40" cy="40" r="8" fill="rgba(201,154,69,.25)"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d4f3d"/>
+      <stop offset="1" stop-color="#15735a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#pattern)"/>
+  <circle cx="1020" cy="105" r="180" fill="rgba(201,154,69,.18)"/>
+  <circle cx="140" cy="535" r="210" fill="rgba(255,250,241,.1)"/>
+  <text x="600" y="260" direction="rtl" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="94" font-weight="900" fill="#fffaf1">وقت القرآن</text>
+  <text x="600" y="350" direction="rtl" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="700" fill="#f8e7bd">قراءة واستماع للقرآن الكريم</text>
+  <rect x="410" y="405" width="380" height="76" rx="38" fill="#fffaf1"/>
+  <text x="600" y="456" direction="rtl" text-anchor="middle" font-family="Cairo, Arial, sans-serif" font-size="30" font-weight="800" fill="#0d4f3d">واجهة عربية سهلة</text>
+</svg>
